@@ -45,6 +45,7 @@ namespace TradeStratInfo_Model_View
         private void tradeStrategyInfoDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("YOU CLICKED IT");
+            Console.WriteLine("Content Clicked!");
         }
 
     }

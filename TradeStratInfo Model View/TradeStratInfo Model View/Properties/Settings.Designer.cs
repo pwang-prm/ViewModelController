@@ -33,5 +33,17 @@ namespace TradeStratInfo_Model_View.Properties {
                 return ((string)(this["PRM_COMBINED_TESTConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string a {
+            get {
+                return ((string)(this["a"]));
+            }
+            set {
+                this["a"] = value;
+            }
+        }
     }
 }

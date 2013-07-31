@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>DataGridExtensions</id>
+    <version>1.0.9.0</version>
+    <title>Data Grid Extensions</title>
+    <authors>tom-englert.de</authors>
+    <owners>tom-englert.de</owners>
+    <licenseUrl>http://datagridextensions.codeplex.com/license</licenseUrl>
+    <projectUrl>http://datagridextensions.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This package contains useful extensions for the MS DataGrid (System.Windows.Controls.DataGrid).
+The current version supports the following features:
+
+Add filtering capabilities to the DataGrid.
+ - Easy to use
+ - Easy to customize
+ - Attaches to the existing DataGrid</description>
+    <summary>Modular extensions for the DataGrid control.</summary>
+    <releaseNotes />
+    <copyright>© 2013 tom-englert.de</copyright>
+    <language />
+    <tags>DGX DataGrid Filter</tags>
+  </metadata>
+</package>
