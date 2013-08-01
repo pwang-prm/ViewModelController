@@ -9,6 +9,6 @@ namespace TradeStratInfo_Model_View
     [TestFixture]
     class TestingForm
     {
-
+     
     }
 }
