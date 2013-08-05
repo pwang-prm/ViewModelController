@@ -15,7 +15,7 @@ namespace TradeStratInfo_Model_View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
+            Application.Run(new Form1());
             
         }
     }
