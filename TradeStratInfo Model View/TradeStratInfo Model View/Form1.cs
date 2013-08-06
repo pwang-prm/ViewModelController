@@ -6,52 +6,52 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using PrescientBusinessObjects.Data;
-using PrescientBusinessObjects.FinancialInstruments;
+using Prescient.Database;
+using System.Data.SqlClient;
+using PrescientBusinessObjects.ViewModels;
 
 namespace TradeStratInfo_Model_View
 {
     public partial class Form1 : Form
     {
+        private BindingSource bindingsource1 = new BindingSource();
+        private DataGridView dataGridView1 = new DataGridView();
+
+        DataBase db;
+        DataTable currentTable;
+        
         public Form1()
         {
-            InitializeComponent();
-        }
+            dataGridView1.Dock = DockStyle.Fill;
+            this.Controls.Add(dataGridView1);
+            IntializeDataGridView();
 
-        private void gszExchangeContractsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.gszExchangeContractsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pRM_COMBINED_TESTDataSet1);
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void IntializeDataGridView()
         {
-            // TODO: This line of code loads data into the 'pRM_COMBINED_TESTDataSet1.gszExchangeContracts' table. You can move, or remove it, as needed.
-            this.gszExchangeContractsTableAdapter.Fill(this.pRM_COMBINED_TESTDataSet1.gszExchangeContracts);
-            // TODO: This line of code loads data into the 'pRM_COMBINED_TESTDataSet1.gszExchangeContracts' table. You can move, or remove it, as needed.
-            this.gszExchangeContractsTableAdapter.Fill(this.pRM_COMBINED_TESTDataSet1.gszExchangeContracts);
-            // TODO: This line of code loads data into the 'pRM_COMBINED_TESTDataSet1.gszExchangeContracts' table. You can move, or remove it, as needed.
-            this.gszExchangeContractsTableAdapter.Fill(this.pRM_COMBINED_TESTDataSet1.gszExchangeContracts);
-
+            db = new DataBase("OLDAUTO2\\MSSQL_PEIXIAN", "PRM_COMBINED_TEST", "sa", "Old$ch00l", 0);
+            currentTable = db.GetDataTable("SELECT gszProductFamily, exchExpYear, exchExpMonth, contractType, TopMonth FROM gszExchangeContracts");
+         
+            dataGridView1.AutoGenerateColumns = true;
+            bindingsource1.DataSource = currentTable;
+            dataGridView1.DataSource = bindingsource1;
+            dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
         }
 
-        private void gszExchangeContractsBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.Validate();
-            this.gszExchangeContractsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pRM_COMBINED_TESTDataSet1);
-
         }
-
-        private void gszExchangeContractsBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-
-            this.Validate();
-            this.gszExchangeContractsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pRM_COMBINED_TESTDataSet1);
-
+            VMInfragisticsFuturesContract vm = new VMInfragisticsFuturesContract(currentTable);
+            vm.topMonthEntered(e.RowIndex, e.ColumnIndex);
+        }
+        private void updateGrid()
+        {
         }
     }
 }

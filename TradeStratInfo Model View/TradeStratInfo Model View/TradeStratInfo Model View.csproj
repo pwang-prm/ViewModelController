@@ -68,16 +68,8 @@
       <DependentUpon>PRM_COMBINED_TESTDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="TestingForm.cs" />
-    <Compile Include="PRM_COMBINED_TESTDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PRM_COMBINED_TESTDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,17 +81,6 @@
     </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="PRM_COMBINED_TESTDataSet.xsc">
-      <DependentUpon>PRM_COMBINED_TESTDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PRM_COMBINED_TESTDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PRM_COMBINED_TESTDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PRM_COMBINED_TESTDataSet.xss">
-      <DependentUpon>PRM_COMBINED_TESTDataSet.xsd</DependentUpon>
-    </None>
     <None Include="PRM_COMBINED_TESTDataSet1.xsc">
       <DependentUpon>PRM_COMBINED_TESTDataSet1.xsd</DependentUpon>
     </None>
@@ -122,11 +103,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\prmBusinessObjectsNew\PRM_BusinessObjects.sln">
-      <Link>PRM_BusinessObjects.sln</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\prmBusinessObjectsNew\PRM_BusinessObjects.csproj">
       <Project>{CB6053C6-3692-4382-83A1-5A8DBB2917F0}</Project>
       <Name>PRM_BusinessObjects</Name>
@@ -135,6 +111,9 @@
       <Project>{8F52607C-A0B6-4DAE-A407-022D72F9DAD8}</Project>
       <Name>PRM_Database</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
