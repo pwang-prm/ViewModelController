@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Prescient.Database;
 using System.Data.SqlClient;
 using PrescientBusinessObjects.ViewModels;
+using PrescientBusinessObjects;
 
 namespace TradeStratInfo_Model_View
 {
@@ -31,6 +32,8 @@ namespace TradeStratInfo_Model_View
 
         private void IntializeDataGridView()
         {
+        //    initbusinessobjects
+            BusinessObjectsManager.initBusinessObjects("OLDAUTO2\\MSSQL_PEIXIAN", "PRM_COMBINED_TEST", "sa", "Old$ch00l", "OLDAUTO2\\MSSQL_PEIXIAN", "PRM_COMBINED_TEST", "sa", "Old$ch00l");
             db = new DataBase("OLDAUTO2\\MSSQL_PEIXIAN", "PRM_COMBINED_TEST", "sa", "Old$ch00l", 0);
             currentTable = db.GetDataTable("SELECT gszProductFamily, exchExpYear, exchExpMonth, contractType, TopMonth FROM gszExchangeContracts");
          
