@@ -20,9 +20,9 @@ namespace TradeStratInfo_Model_View {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("PRM_COMBINED_TESTDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PRM_COMBINED_TESTDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class PRM_COMBINED_TESTDataSet1 : global::System.Data.DataSet {
+    public partial class PRM_COMBINED_TESTDataSet : global::System.Data.DataSet {
         
         private gszExchangeContractsDataTable tablegszExchangeContracts;
         
@@ -30,7 +30,7 @@ namespace TradeStratInfo_Model_View {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public PRM_COMBINED_TESTDataSet1() {
+        public PRM_COMBINED_TESTDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TradeStratInfo_Model_View {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected PRM_COMBINED_TESTDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PRM_COMBINED_TESTDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace TradeStratInfo_Model_View {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            PRM_COMBINED_TESTDataSet1 cln = ((PRM_COMBINED_TESTDataSet1)(base.Clone()));
+            PRM_COMBINED_TESTDataSet cln = ((PRM_COMBINED_TESTDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace TradeStratInfo_Model_View {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "PRM_COMBINED_TESTDataSet1";
+            this.DataSetName = "PRM_COMBINED_TESTDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/PRM_COMBINED_TESTDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/PRM_COMBINED_TESTDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablegszExchangeContracts = new gszExchangeContractsDataTable();
@@ -225,7 +225,7 @@ namespace TradeStratInfo_Model_View {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            PRM_COMBINED_TESTDataSet1 ds = new PRM_COMBINED_TESTDataSet1();
+            PRM_COMBINED_TESTDataSet ds = new PRM_COMBINED_TESTDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -283,12 +283,6 @@ namespace TradeStratInfo_Model_View {
             
             private global::System.Data.DataColumn columngszProductFamily;
             
-            private global::System.Data.DataColumn columnexchExpMonth;
-            
-            private global::System.Data.DataColumn columnexchExpYear;
-            
-            private global::System.Data.DataColumn columnTopMonth;
-            
             private global::System.Data.DataColumn columncontractType;
             
             private global::System.Data.DataColumn columnexpiration;
@@ -303,11 +297,17 @@ namespace TradeStratInfo_Model_View {
             
             private global::System.Data.DataColumn columnexchProdID;
             
+            private global::System.Data.DataColumn columnexchExpMonth;
+            
+            private global::System.Data.DataColumn columnexchExpYear;
+            
             private global::System.Data.DataColumn columnopenTime;
             
             private global::System.Data.DataColumn columnsettlement;
             
             private global::System.Data.DataColumn columnBatchRecalcMktWidth;
+            
+            private global::System.Data.DataColumn columnTopMonth;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -355,30 +355,6 @@ namespace TradeStratInfo_Model_View {
             public global::System.Data.DataColumn gszProductFamilyColumn {
                 get {
                     return this.columngszProductFamily;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn exchExpMonthColumn {
-                get {
-                    return this.columnexchExpMonth;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn exchExpYearColumn {
-                get {
-                    return this.columnexchExpYear;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TopMonthColumn {
-                get {
-                    return this.columnTopMonth;
                 }
             }
             
@@ -440,6 +416,22 @@ namespace TradeStratInfo_Model_View {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn exchExpMonthColumn {
+                get {
+                    return this.columnexchExpMonth;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn exchExpYearColumn {
+                get {
+                    return this.columnexchExpYear;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn openTimeColumn {
                 get {
                     return this.columnopenTime;
@@ -459,6 +451,14 @@ namespace TradeStratInfo_Model_View {
             public global::System.Data.DataColumn BatchRecalcMktWidthColumn {
                 get {
                     return this.columnBatchRecalcMktWidth;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TopMonthColumn {
+                get {
+                    return this.columnTopMonth;
                 }
             }
             
@@ -499,14 +499,11 @@ namespace TradeStratInfo_Model_View {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public gszExchangeContractsRow AddgszExchangeContractsRow(string gszContractName, string gszProductFamily, string exchExpMonth, string exchExpYear, int TopMonth, string contractType, System.DateTime expiration, string series, string underlyingContract, string underlyingSeries, string exchangeID, string exchProdID, string openTime, double settlement, double BatchRecalcMktWidth) {
+            public gszExchangeContractsRow AddgszExchangeContractsRow(string gszContractName, string gszProductFamily, string contractType, System.DateTime expiration, string series, string underlyingContract, string underlyingSeries, string exchangeID, string exchProdID, string exchExpMonth, string exchExpYear, string openTime, double settlement, double BatchRecalcMktWidth, int TopMonth) {
                 gszExchangeContractsRow rowgszExchangeContractsRow = ((gszExchangeContractsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         gszContractName,
                         gszProductFamily,
-                        exchExpMonth,
-                        exchExpYear,
-                        TopMonth,
                         contractType,
                         expiration,
                         series,
@@ -514,9 +511,12 @@ namespace TradeStratInfo_Model_View {
                         underlyingSeries,
                         exchangeID,
                         exchProdID,
+                        exchExpMonth,
+                        exchExpYear,
                         openTime,
                         settlement,
-                        BatchRecalcMktWidth};
+                        BatchRecalcMktWidth,
+                        TopMonth};
                 rowgszExchangeContractsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgszExchangeContractsRow);
                 return rowgszExchangeContractsRow;
@@ -548,9 +548,6 @@ namespace TradeStratInfo_Model_View {
             internal void InitVars() {
                 this.columngszContractName = base.Columns["gszContractName"];
                 this.columngszProductFamily = base.Columns["gszProductFamily"];
-                this.columnexchExpMonth = base.Columns["exchExpMonth"];
-                this.columnexchExpYear = base.Columns["exchExpYear"];
-                this.columnTopMonth = base.Columns["TopMonth"];
                 this.columncontractType = base.Columns["contractType"];
                 this.columnexpiration = base.Columns["expiration"];
                 this.columnseries = base.Columns["series"];
@@ -558,9 +555,12 @@ namespace TradeStratInfo_Model_View {
                 this.columnunderlyingSeries = base.Columns["underlyingSeries"];
                 this.columnexchangeID = base.Columns["exchangeID"];
                 this.columnexchProdID = base.Columns["exchProdID"];
+                this.columnexchExpMonth = base.Columns["exchExpMonth"];
+                this.columnexchExpYear = base.Columns["exchExpYear"];
                 this.columnopenTime = base.Columns["openTime"];
                 this.columnsettlement = base.Columns["settlement"];
                 this.columnBatchRecalcMktWidth = base.Columns["BatchRecalcMktWidth"];
+                this.columnTopMonth = base.Columns["TopMonth"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -570,12 +570,6 @@ namespace TradeStratInfo_Model_View {
                 base.Columns.Add(this.columngszContractName);
                 this.columngszProductFamily = new global::System.Data.DataColumn("gszProductFamily", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngszProductFamily);
-                this.columnexchExpMonth = new global::System.Data.DataColumn("exchExpMonth", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnexchExpMonth);
-                this.columnexchExpYear = new global::System.Data.DataColumn("exchExpYear", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnexchExpYear);
-                this.columnTopMonth = new global::System.Data.DataColumn("TopMonth", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTopMonth);
                 this.columncontractType = new global::System.Data.DataColumn("contractType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontractType);
                 this.columnexpiration = new global::System.Data.DataColumn("expiration", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -590,12 +584,18 @@ namespace TradeStratInfo_Model_View {
                 base.Columns.Add(this.columnexchangeID);
                 this.columnexchProdID = new global::System.Data.DataColumn("exchProdID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnexchProdID);
+                this.columnexchExpMonth = new global::System.Data.DataColumn("exchExpMonth", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexchExpMonth);
+                this.columnexchExpYear = new global::System.Data.DataColumn("exchExpYear", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexchExpYear);
                 this.columnopenTime = new global::System.Data.DataColumn("openTime", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnopenTime);
                 this.columnsettlement = new global::System.Data.DataColumn("settlement", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsettlement);
                 this.columnBatchRecalcMktWidth = new global::System.Data.DataColumn("BatchRecalcMktWidth", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBatchRecalcMktWidth);
+                this.columnTopMonth = new global::System.Data.DataColumn("TopMonth", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTopMonth);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columngszContractName}, true));
                 this.columngszContractName.AllowDBNull = false;
@@ -603,11 +603,6 @@ namespace TradeStratInfo_Model_View {
                 this.columngszContractName.MaxLength = 15;
                 this.columngszProductFamily.AllowDBNull = false;
                 this.columngszProductFamily.MaxLength = 15;
-                this.columnexchExpMonth.AllowDBNull = false;
-                this.columnexchExpMonth.MaxLength = 2;
-                this.columnexchExpYear.AllowDBNull = false;
-                this.columnexchExpYear.MaxLength = 4;
-                this.columnTopMonth.AllowDBNull = false;
                 this.columncontractType.AllowDBNull = false;
                 this.columncontractType.MaxLength = 1;
                 this.columnexpiration.AllowDBNull = false;
@@ -621,10 +616,15 @@ namespace TradeStratInfo_Model_View {
                 this.columnexchangeID.MaxLength = 15;
                 this.columnexchProdID.AllowDBNull = false;
                 this.columnexchProdID.MaxLength = 4;
+                this.columnexchExpMonth.AllowDBNull = false;
+                this.columnexchExpMonth.MaxLength = 2;
+                this.columnexchExpYear.AllowDBNull = false;
+                this.columnexchExpYear.MaxLength = 4;
                 this.columnopenTime.AllowDBNull = false;
                 this.columnopenTime.MaxLength = 10;
                 this.columnsettlement.AllowDBNull = false;
                 this.columnBatchRecalcMktWidth.AllowDBNull = false;
+                this.columnTopMonth.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -692,7 +692,7 @@ namespace TradeStratInfo_Model_View {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PRM_COMBINED_TESTDataSet1 ds = new PRM_COMBINED_TESTDataSet1();
+                PRM_COMBINED_TESTDataSet ds = new PRM_COMBINED_TESTDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -789,39 +789,6 @@ namespace TradeStratInfo_Model_View {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string exchExpMonth {
-                get {
-                    return ((string)(this[this.tablegszExchangeContracts.exchExpMonthColumn]));
-                }
-                set {
-                    this[this.tablegszExchangeContracts.exchExpMonthColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string exchExpYear {
-                get {
-                    return ((string)(this[this.tablegszExchangeContracts.exchExpYearColumn]));
-                }
-                set {
-                    this[this.tablegszExchangeContracts.exchExpYearColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TopMonth {
-                get {
-                    return ((int)(this[this.tablegszExchangeContracts.TopMonthColumn]));
-                }
-                set {
-                    this[this.tablegszExchangeContracts.TopMonthColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string contractType {
                 get {
                     return ((string)(this[this.tablegszExchangeContracts.contractTypeColumn]));
@@ -899,6 +866,28 @@ namespace TradeStratInfo_Model_View {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string exchExpMonth {
+                get {
+                    return ((string)(this[this.tablegszExchangeContracts.exchExpMonthColumn]));
+                }
+                set {
+                    this[this.tablegszExchangeContracts.exchExpMonthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string exchExpYear {
+                get {
+                    return ((string)(this[this.tablegszExchangeContracts.exchExpYearColumn]));
+                }
+                set {
+                    this[this.tablegszExchangeContracts.exchExpYearColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string openTime {
                 get {
                     return ((string)(this[this.tablegszExchangeContracts.openTimeColumn]));
@@ -927,6 +916,17 @@ namespace TradeStratInfo_Model_View {
                 }
                 set {
                     this[this.tablegszExchangeContracts.BatchRecalcMktWidthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TopMonth {
+                get {
+                    return ((int)(this[this.tablegszExchangeContracts.TopMonthColumn]));
+                }
+                set {
+                    this[this.tablegszExchangeContracts.TopMonthColumn] = value;
                 }
             }
         }
@@ -966,7 +966,7 @@ namespace TradeStratInfo_Model_View {
         }
     }
 }
-namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
+namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSetTableAdapters {
     
     
     /// <summary>
@@ -980,13 +980,13 @@ namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class gszExchangeContractsTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        private global::System.Data.SqlServerCe.SqlCeDataAdapter _adapter;
         
-        private global::System.Data.SqlClient.SqlConnection _connection;
+        private global::System.Data.SqlServerCe.SqlCeConnection _connection;
         
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        private global::System.Data.SqlServerCe.SqlCeTransaction _transaction;
         
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        private global::System.Data.SqlServerCe.SqlCeCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
@@ -998,7 +998,7 @@ namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+        protected internal global::System.Data.SqlServerCe.SqlCeDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -1009,7 +1009,7 @@ namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
+        internal global::System.Data.SqlServerCe.SqlCeConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -1029,7 +1029,7 @@ namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlServerCe.SqlCeCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
@@ -1037,7 +1037,7 @@ namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+        internal global::System.Data.SqlServerCe.SqlCeTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -1063,7 +1063,7 @@ namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+        protected global::System.Data.SqlServerCe.SqlCeCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -1086,15 +1086,12 @@ namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            this._adapter = new global::System.Data.SqlServerCe.SqlCeDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "gszExchangeContracts";
             tableMapping.ColumnMappings.Add("gszContractName", "gszContractName");
             tableMapping.ColumnMappings.Add("gszProductFamily", "gszProductFamily");
-            tableMapping.ColumnMappings.Add("exchExpMonth", "exchExpMonth");
-            tableMapping.ColumnMappings.Add("exchExpYear", "exchExpYear");
-            tableMapping.ColumnMappings.Add("TopMonth", "TopMonth");
             tableMapping.ColumnMappings.Add("contractType", "contractType");
             tableMapping.ColumnMappings.Add("expiration", "expiration");
             tableMapping.ColumnMappings.Add("series", "series");
@@ -1102,103 +1099,73 @@ namespace TradeStratInfo_Model_View.PRM_COMBINED_TESTDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("underlyingSeries", "underlyingSeries");
             tableMapping.ColumnMappings.Add("exchangeID", "exchangeID");
             tableMapping.ColumnMappings.Add("exchProdID", "exchProdID");
+            tableMapping.ColumnMappings.Add("exchExpMonth", "exchExpMonth");
+            tableMapping.ColumnMappings.Add("exchExpYear", "exchExpYear");
             tableMapping.ColumnMappings.Add("openTime", "openTime");
             tableMapping.ColumnMappings.Add("settlement", "settlement");
             tableMapping.ColumnMappings.Add("BatchRecalcMktWidth", "BatchRecalcMktWidth");
+            tableMapping.ColumnMappings.Add("TopMonth", "TopMonth");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [gszExchangeContracts] WHERE (([gszProductFamily] = @Original_gszProductFamily) AND ([exchExpMonth] = @Original_exchExpMonth) AND ([exchExpYear] = @Original_exchExpYear) AND ([TopMonth] = @Original_TopMonth) AND ([gszContractName] = @Original_gszContractName) AND ([BatchRecalcMktWidth] = @Original_BatchRecalcMktWidth) AND ([contractType] = @Original_contractType) AND ([exchProdID] = @Original_exchProdID) AND ([exchangeID] = @Original_exchangeID) AND ([expiration] = @Original_expiration) AND ([openTime] = @Original_openTime) AND ([series] = @Original_series) AND ([settlement] = @Original_settlement) AND ([underlyingContract] = @Original_underlyingContract) AND ([underlyingSeries] = @Original_underlyingSeries))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [gszExchangeContracts] WHERE (([gszContractName] = @p1))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gszProductFamily", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gszProductFamily", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchExpMonth", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchExpMonth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchExpYear", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchExpYear", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TopMonth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TopMonth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gszContractName", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gszContractName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BatchRecalcMktWidth", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BatchRecalcMktWidth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_contractType", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contractType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchProdID", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchProdID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchangeID", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_expiration", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "expiration", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_openTime", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "openTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_series", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "series", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_settlement", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "settlement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_underlyingContract", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "underlyingContract", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_underlyingSeries", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "underlyingSeries", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "gszContractName", global::System.Data.DataRowVersion.Original, null));
+            this._adapter.InsertCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [gszExchangeContracts] ([gszProductFamily], [exchExpMonth], [exchExpYear], [TopMonth], [gszContractName], [BatchRecalcMktWidth], [contractType], [exchProdID], [exchangeID], [expiration], [openTime], [series], [settlement], [underlyingContract], [underlyingSeries]) VALUES (@gszProductFamily, @exchExpMonth, @exchExpYear, @TopMonth, @gszContractName, @BatchRecalcMktWidth, @contractType, @exchProdID, @exchangeID, @expiration, @openTime, @series, @settlement, @underlyingContract, @underlyingSeries);
-SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, BatchRecalcMktWidth, contractType, exchProdID, exchangeID, expiration, openTime, series, settlement, underlyingContract, underlyingSeries FROM gszExchangeContracts WHERE (gszContractName = @gszContractName)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [gszExchangeContracts] ([gszContractName], [gszProductFamily], [contractType], [expiration], [series], [underlyingContract], [underlyingSeries], [exchangeID], [exchProdID], [exchExpMonth], [exchExpYear], [openTime], [settlement], [BatchRecalcMktWidth], [TopMonth]) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gszProductFamily", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gszProductFamily", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchExpMonth", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchExpMonth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchExpYear", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchExpYear", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TopMonth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TopMonth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gszContractName", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gszContractName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BatchRecalcMktWidth", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BatchRecalcMktWidth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contractType", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contractType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchProdID", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchProdID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchangeID", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@expiration", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "expiration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@openTime", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "openTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@series", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "series", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@settlement", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "settlement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@underlyingContract", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "underlyingContract", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@underlyingSeries", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "underlyingSeries", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "gszContractName", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "gszProductFamily", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p3", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "contractType", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p4", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "expiration", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p5", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "series", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p6", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "underlyingContract", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p7", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "underlyingSeries", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p8", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "exchangeID", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p9", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "exchProdID", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p10", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "exchExpMonth", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p11", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "exchExpYear", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p12", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "openTime", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p13", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "settlement", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p14", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "BatchRecalcMktWidth", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p15", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "TopMonth", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [gszExchangeContracts] SET [gszProductFamily] = @gszProductFamily, [exchExpMonth] = @exchExpMonth, [exchExpYear] = @exchExpYear, [TopMonth] = @TopMonth, [gszContractName] = @gszContractName, [BatchRecalcMktWidth] = @BatchRecalcMktWidth, [contractType] = @contractType, [exchProdID] = @exchProdID, [exchangeID] = @exchangeID, [expiration] = @expiration, [openTime] = @openTime, [series] = @series, [settlement] = @settlement, [underlyingContract] = @underlyingContract, [underlyingSeries] = @underlyingSeries WHERE (([gszProductFamily] = @Original_gszProductFamily) AND ([exchExpMonth] = @Original_exchExpMonth) AND ([exchExpYear] = @Original_exchExpYear) AND ([TopMonth] = @Original_TopMonth) AND ([gszContractName] = @Original_gszContractName) AND ([BatchRecalcMktWidth] = @Original_BatchRecalcMktWidth) AND ([contractType] = @Original_contractType) AND ([exchProdID] = @Original_exchProdID) AND ([exchangeID] = @Original_exchangeID) AND ([expiration] = @Original_expiration) AND ([openTime] = @Original_openTime) AND ([series] = @Original_series) AND ([settlement] = @Original_settlement) AND ([underlyingContract] = @Original_underlyingContract) AND ([underlyingSeries] = @Original_underlyingSeries));
-SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, BatchRecalcMktWidth, contractType, exchProdID, exchangeID, expiration, openTime, series, settlement, underlyingContract, underlyingSeries FROM gszExchangeContracts WHERE (gszContractName = @gszContractName)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [gszExchangeContracts] SET [gszContractName] = @p1, [gszProductFamily] = @p2, [contractType] = @p3, [expiration] = @p4, [series] = @p5, [underlyingContract] = @p6, [underlyingSeries] = @p7, [exchangeID] = @p8, [exchProdID] = @p9, [exchExpMonth] = @p10, [exchExpYear] = @p11, [openTime] = @p12, [settlement] = @p13, [BatchRecalcMktWidth] = @p14, [TopMonth] = @p15 WHERE (([gszContractName] = @p16))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gszProductFamily", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gszProductFamily", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchExpMonth", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchExpMonth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchExpYear", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchExpYear", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TopMonth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TopMonth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gszContractName", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gszContractName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BatchRecalcMktWidth", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BatchRecalcMktWidth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contractType", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contractType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchProdID", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchProdID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exchangeID", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@expiration", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "expiration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@openTime", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "openTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@series", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "series", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@settlement", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "settlement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@underlyingContract", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "underlyingContract", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@underlyingSeries", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "underlyingSeries", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gszProductFamily", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gszProductFamily", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchExpMonth", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchExpMonth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchExpYear", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchExpYear", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TopMonth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TopMonth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gszContractName", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gszContractName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BatchRecalcMktWidth", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BatchRecalcMktWidth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_contractType", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contractType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchProdID", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchProdID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_exchangeID", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "exchangeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_expiration", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "expiration", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_openTime", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "openTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_series", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "series", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_settlement", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "settlement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_underlyingContract", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "underlyingContract", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_underlyingSeries", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "underlyingSeries", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "gszContractName", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "gszProductFamily", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p3", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "contractType", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p4", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "expiration", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p5", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "series", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p6", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "underlyingContract", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p7", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "underlyingSeries", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p8", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "exchangeID", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p9", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "exchProdID", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p10", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "exchExpMonth", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p11", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "exchExpYear", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p12", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "openTime", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p13", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "settlement", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p14", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "BatchRecalcMktWidth", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p15", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "TopMonth", global::System.Data.DataRowVersion.Current, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@p16", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "gszContractName", global::System.Data.DataRowVersion.Original, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TradeStratInfo_Model_View.Properties.Settings.Default.PRM_COMBINED_TESTConnectionString;
+            this._connection = new global::System.Data.SqlServerCe.SqlCeConnection();
+            this._connection.ConnectionString = global::TradeStratInfo_Model_View.Properties.Settings.Default.ClientPRM_COMBINED_TESTConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, Ba" +
-                "tchRecalcMktWidth, contractType, exchProdID, exchangeID, expiration, openTime, s" +
-                "eries, settlement, underlyingContract, underlyingSeries FROM gszExchangeContract" +
-                "s";
+            this._commandCollection[0].CommandText = @"SELECT [gszContractName], [gszProductFamily], [contractType], [expiration], [series], [underlyingContract], [underlyingSeries], [exchangeID], [exchProdID], [exchExpMonth], [exchExpYear], [openTime], [settlement], [BatchRecalcMktWidth], [TopMonth] FROM [gszExchangeContracts]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1206,7 +1173,7 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PRM_COMBINED_TESTDataSet1.gszExchangeContractsDataTable dataTable) {
+        public virtual int Fill(PRM_COMBINED_TESTDataSet.gszExchangeContractsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1219,9 +1186,9 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PRM_COMBINED_TESTDataSet1.gszExchangeContractsDataTable GetData() {
+        public virtual PRM_COMBINED_TESTDataSet.gszExchangeContractsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PRM_COMBINED_TESTDataSet1.gszExchangeContractsDataTable dataTable = new PRM_COMBINED_TESTDataSet1.gszExchangeContractsDataTable();
+            PRM_COMBINED_TESTDataSet.gszExchangeContractsDataTable dataTable = new PRM_COMBINED_TESTDataSet.gszExchangeContractsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1229,14 +1196,14 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PRM_COMBINED_TESTDataSet1.gszExchangeContractsDataTable dataTable) {
+        public virtual int Update(PRM_COMBINED_TESTDataSet.gszExchangeContractsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PRM_COMBINED_TESTDataSet1 dataSet) {
+        public virtual int Update(PRM_COMBINED_TESTDataSet dataSet) {
             return this.Adapter.Update(dataSet, "gszExchangeContracts");
         }
         
@@ -1259,76 +1226,12 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_gszProductFamily, string Original_exchExpMonth, string Original_exchExpYear, int Original_TopMonth, string Original_gszContractName, double Original_BatchRecalcMktWidth, string Original_contractType, string Original_exchProdID, string Original_exchangeID, System.DateTime Original_expiration, string Original_openTime, string Original_series, double Original_settlement, string Original_underlyingContract, string Original_underlyingSeries) {
-            if ((Original_gszProductFamily == null)) {
-                throw new global::System.ArgumentNullException("Original_gszProductFamily");
+        public virtual int Delete(string p1) {
+            if ((p1 == null)) {
+                throw new global::System.ArgumentNullException("p1");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_gszProductFamily));
-            }
-            if ((Original_exchExpMonth == null)) {
-                throw new global::System.ArgumentNullException("Original_exchExpMonth");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_exchExpMonth));
-            }
-            if ((Original_exchExpYear == null)) {
-                throw new global::System.ArgumentNullException("Original_exchExpYear");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_exchExpYear));
-            }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_TopMonth));
-            if ((Original_gszContractName == null)) {
-                throw new global::System.ArgumentNullException("Original_gszContractName");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_gszContractName));
-            }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((double)(Original_BatchRecalcMktWidth));
-            if ((Original_contractType == null)) {
-                throw new global::System.ArgumentNullException("Original_contractType");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_contractType));
-            }
-            if ((Original_exchProdID == null)) {
-                throw new global::System.ArgumentNullException("Original_exchProdID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_exchProdID));
-            }
-            if ((Original_exchangeID == null)) {
-                throw new global::System.ArgumentNullException("Original_exchangeID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_exchangeID));
-            }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_expiration));
-            if ((Original_openTime == null)) {
-                throw new global::System.ArgumentNullException("Original_openTime");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_openTime));
-            }
-            if ((Original_series == null)) {
-                throw new global::System.ArgumentNullException("Original_series");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_series));
-            }
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((double)(Original_settlement));
-            if ((Original_underlyingContract == null)) {
-                throw new global::System.ArgumentNullException("Original_underlyingContract");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_underlyingContract));
-            }
-            if ((Original_underlyingSeries == null)) {
-                throw new global::System.ArgumentNullException("Original_underlyingSeries");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_underlyingSeries));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(p1));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1350,77 +1253,77 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string gszProductFamily, string exchExpMonth, string exchExpYear, int TopMonth, string gszContractName, double BatchRecalcMktWidth, string contractType, string exchProdID, string exchangeID, System.DateTime expiration, string openTime, string series, double settlement, string underlyingContract, string underlyingSeries) {
-            if ((gszProductFamily == null)) {
-                throw new global::System.ArgumentNullException("gszProductFamily");
+        public virtual int Insert(string p1, string p2, string p3, System.DateTime p4, string p5, string p6, string p7, string p8, string p9, string p10, string p11, string p12, double p13, double p14, int p15) {
+            if ((p1 == null)) {
+                throw new global::System.ArgumentNullException("p1");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(gszProductFamily));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(p1));
             }
-            if ((exchExpMonth == null)) {
-                throw new global::System.ArgumentNullException("exchExpMonth");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(exchExpMonth));
-            }
-            if ((exchExpYear == null)) {
-                throw new global::System.ArgumentNullException("exchExpYear");
+            if ((p2 == null)) {
+                throw new global::System.ArgumentNullException("p2");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(exchExpYear));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(p2));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(TopMonth));
-            if ((gszContractName == null)) {
-                throw new global::System.ArgumentNullException("gszContractName");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(gszContractName));
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((double)(BatchRecalcMktWidth));
-            if ((contractType == null)) {
-                throw new global::System.ArgumentNullException("contractType");
+            if ((p3 == null)) {
+                throw new global::System.ArgumentNullException("p3");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(contractType));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p3));
             }
-            if ((exchProdID == null)) {
-                throw new global::System.ArgumentNullException("exchProdID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(exchProdID));
-            }
-            if ((exchangeID == null)) {
-                throw new global::System.ArgumentNullException("exchangeID");
+            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(p4));
+            if ((p5 == null)) {
+                throw new global::System.ArgumentNullException("p5");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(exchangeID));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(p5));
             }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(expiration));
-            if ((openTime == null)) {
-                throw new global::System.ArgumentNullException("openTime");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(openTime));
-            }
-            if ((series == null)) {
-                throw new global::System.ArgumentNullException("series");
+            if ((p6 == null)) {
+                throw new global::System.ArgumentNullException("p6");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(series));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(p6));
             }
-            this.Adapter.InsertCommand.Parameters[12].Value = ((double)(settlement));
-            if ((underlyingContract == null)) {
-                throw new global::System.ArgumentNullException("underlyingContract");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(underlyingContract));
-            }
-            if ((underlyingSeries == null)) {
-                throw new global::System.ArgumentNullException("underlyingSeries");
+            if ((p7 == null)) {
+                throw new global::System.ArgumentNullException("p7");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(underlyingSeries));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(p7));
             }
+            if ((p8 == null)) {
+                throw new global::System.ArgumentNullException("p8");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(p8));
+            }
+            if ((p9 == null)) {
+                throw new global::System.ArgumentNullException("p9");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(p9));
+            }
+            if ((p10 == null)) {
+                throw new global::System.ArgumentNullException("p10");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(p10));
+            }
+            if ((p11 == null)) {
+                throw new global::System.ArgumentNullException("p11");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(p11));
+            }
+            if ((p12 == null)) {
+                throw new global::System.ArgumentNullException("p12");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(p12));
+            }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((double)(p13));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((double)(p14));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((int)(p15));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1442,175 +1345,97 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string gszProductFamily, 
-                    string exchExpMonth, 
-                    string exchExpYear, 
-                    int TopMonth, 
-                    string gszContractName, 
-                    double BatchRecalcMktWidth, 
-                    string contractType, 
-                    string exchProdID, 
-                    string exchangeID, 
-                    System.DateTime expiration, 
-                    string openTime, 
-                    string series, 
-                    double settlement, 
-                    string underlyingContract, 
-                    string underlyingSeries, 
-                    string Original_gszProductFamily, 
-                    string Original_exchExpMonth, 
-                    string Original_exchExpYear, 
-                    int Original_TopMonth, 
-                    string Original_gszContractName, 
-                    double Original_BatchRecalcMktWidth, 
-                    string Original_contractType, 
-                    string Original_exchProdID, 
-                    string Original_exchangeID, 
-                    System.DateTime Original_expiration, 
-                    string Original_openTime, 
-                    string Original_series, 
-                    double Original_settlement, 
-                    string Original_underlyingContract, 
-                    string Original_underlyingSeries) {
-            if ((gszProductFamily == null)) {
-                throw new global::System.ArgumentNullException("gszProductFamily");
+                    string p1, 
+                    string p2, 
+                    string p3, 
+                    System.DateTime p4, 
+                    string p5, 
+                    string p6, 
+                    string p7, 
+                    string p8, 
+                    string p9, 
+                    string p10, 
+                    string p11, 
+                    string p12, 
+                    double p13, 
+                    double p14, 
+                    int p15, 
+                    string p16) {
+            if ((p1 == null)) {
+                throw new global::System.ArgumentNullException("p1");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(gszProductFamily));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(p1));
             }
-            if ((exchExpMonth == null)) {
-                throw new global::System.ArgumentNullException("exchExpMonth");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(exchExpMonth));
-            }
-            if ((exchExpYear == null)) {
-                throw new global::System.ArgumentNullException("exchExpYear");
+            if ((p2 == null)) {
+                throw new global::System.ArgumentNullException("p2");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(exchExpYear));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(p2));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(TopMonth));
-            if ((gszContractName == null)) {
-                throw new global::System.ArgumentNullException("gszContractName");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(gszContractName));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(BatchRecalcMktWidth));
-            if ((contractType == null)) {
-                throw new global::System.ArgumentNullException("contractType");
+            if ((p3 == null)) {
+                throw new global::System.ArgumentNullException("p3");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(contractType));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p3));
             }
-            if ((exchProdID == null)) {
-                throw new global::System.ArgumentNullException("exchProdID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(exchProdID));
-            }
-            if ((exchangeID == null)) {
-                throw new global::System.ArgumentNullException("exchangeID");
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(p4));
+            if ((p5 == null)) {
+                throw new global::System.ArgumentNullException("p5");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(exchangeID));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(p5));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(expiration));
-            if ((openTime == null)) {
-                throw new global::System.ArgumentNullException("openTime");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(openTime));
-            }
-            if ((series == null)) {
-                throw new global::System.ArgumentNullException("series");
+            if ((p6 == null)) {
+                throw new global::System.ArgumentNullException("p6");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(series));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(p6));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(settlement));
-            if ((underlyingContract == null)) {
-                throw new global::System.ArgumentNullException("underlyingContract");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(underlyingContract));
-            }
-            if ((underlyingSeries == null)) {
-                throw new global::System.ArgumentNullException("underlyingSeries");
+            if ((p7 == null)) {
+                throw new global::System.ArgumentNullException("p7");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(underlyingSeries));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(p7));
             }
-            if ((Original_gszProductFamily == null)) {
-                throw new global::System.ArgumentNullException("Original_gszProductFamily");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_gszProductFamily));
-            }
-            if ((Original_exchExpMonth == null)) {
-                throw new global::System.ArgumentNullException("Original_exchExpMonth");
+            if ((p8 == null)) {
+                throw new global::System.ArgumentNullException("p8");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_exchExpMonth));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(p8));
             }
-            if ((Original_exchExpYear == null)) {
-                throw new global::System.ArgumentNullException("Original_exchExpYear");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_exchExpYear));
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_TopMonth));
-            if ((Original_gszContractName == null)) {
-                throw new global::System.ArgumentNullException("Original_gszContractName");
+            if ((p9 == null)) {
+                throw new global::System.ArgumentNullException("p9");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_gszContractName));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(p9));
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((double)(Original_BatchRecalcMktWidth));
-            if ((Original_contractType == null)) {
-                throw new global::System.ArgumentNullException("Original_contractType");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_contractType));
-            }
-            if ((Original_exchProdID == null)) {
-                throw new global::System.ArgumentNullException("Original_exchProdID");
+            if ((p10 == null)) {
+                throw new global::System.ArgumentNullException("p10");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_exchProdID));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(p10));
             }
-            if ((Original_exchangeID == null)) {
-                throw new global::System.ArgumentNullException("Original_exchangeID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_exchangeID));
-            }
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((System.DateTime)(Original_expiration));
-            if ((Original_openTime == null)) {
-                throw new global::System.ArgumentNullException("Original_openTime");
+            if ((p11 == null)) {
+                throw new global::System.ArgumentNullException("p11");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_openTime));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(p11));
             }
-            if ((Original_series == null)) {
-                throw new global::System.ArgumentNullException("Original_series");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_series));
-            }
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((double)(Original_settlement));
-            if ((Original_underlyingContract == null)) {
-                throw new global::System.ArgumentNullException("Original_underlyingContract");
+            if ((p12 == null)) {
+                throw new global::System.ArgumentNullException("p12");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_underlyingContract));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(p12));
             }
-            if ((Original_underlyingSeries == null)) {
-                throw new global::System.ArgumentNullException("Original_underlyingSeries");
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(p13));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(p14));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(p15));
+            if ((p16 == null)) {
+                throw new global::System.ArgumentNullException("p16");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_underlyingSeries));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(p16));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1632,37 +1457,8 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string gszProductFamily, 
-                    string exchExpMonth, 
-                    string exchExpYear, 
-                    int TopMonth, 
-                    double BatchRecalcMktWidth, 
-                    string contractType, 
-                    string exchProdID, 
-                    string exchangeID, 
-                    System.DateTime expiration, 
-                    string openTime, 
-                    string series, 
-                    double settlement, 
-                    string underlyingContract, 
-                    string underlyingSeries, 
-                    string Original_gszProductFamily, 
-                    string Original_exchExpMonth, 
-                    string Original_exchExpYear, 
-                    int Original_TopMonth, 
-                    string Original_gszContractName, 
-                    double Original_BatchRecalcMktWidth, 
-                    string Original_contractType, 
-                    string Original_exchProdID, 
-                    string Original_exchangeID, 
-                    System.DateTime Original_expiration, 
-                    string Original_openTime, 
-                    string Original_series, 
-                    double Original_settlement, 
-                    string Original_underlyingContract, 
-                    string Original_underlyingSeries) {
-            return this.Update(gszProductFamily, exchExpMonth, exchExpYear, TopMonth, Original_gszContractName, BatchRecalcMktWidth, contractType, exchProdID, exchangeID, expiration, openTime, series, settlement, underlyingContract, underlyingSeries, Original_gszProductFamily, Original_exchExpMonth, Original_exchExpYear, Original_TopMonth, Original_gszContractName, Original_BatchRecalcMktWidth, Original_contractType, Original_exchProdID, Original_exchangeID, Original_expiration, Original_openTime, Original_series, Original_settlement, Original_underlyingContract, Original_underlyingSeries);
+        public virtual int Update(string p2, string p3, System.DateTime p4, string p5, string p6, string p7, string p8, string p9, string p10, string p11, string p12, double p13, double p14, int p15, string p16) {
+            return this.Update(p16, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16);
         }
     }
     
@@ -1757,7 +1553,7 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(PRM_COMBINED_TESTDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(PRM_COMBINED_TESTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._gszExchangeContractsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.gszExchangeContracts.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1776,7 +1572,7 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(PRM_COMBINED_TESTDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(PRM_COMBINED_TESTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._gszExchangeContractsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.gszExchangeContracts.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1794,7 +1590,7 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(PRM_COMBINED_TESTDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(PRM_COMBINED_TESTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._gszExchangeContractsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.gszExchangeContracts.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1836,7 +1632,7 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(PRM_COMBINED_TESTDataSet1 dataSet) {
+        public virtual int UpdateAll(PRM_COMBINED_TESTDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
@@ -1882,8 +1678,8 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
                 //
                 if ((this._gszExchangeContractsTableAdapter != null)) {
                     revertConnections.Add(this._gszExchangeContractsTableAdapter, this._gszExchangeContractsTableAdapter.Connection);
-                    this._gszExchangeContractsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._gszExchangeContractsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    this._gszExchangeContractsTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));
+                    this._gszExchangeContractsTableAdapter.Transaction = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));
                     if (this._gszExchangeContractsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._gszExchangeContractsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._gszExchangeContractsTableAdapter.Adapter);
@@ -1948,7 +1744,7 @@ SELECT gszProductFamily, exchExpMonth, exchExpYear, TopMonth, gszContractName, B
                     workConnection.Close();
                 }
                 if ((this._gszExchangeContractsTableAdapter != null)) {
-                    this._gszExchangeContractsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gszExchangeContractsTableAdapter]));
+                    this._gszExchangeContractsTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this._gszExchangeContractsTableAdapter]));
                     this._gszExchangeContractsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {

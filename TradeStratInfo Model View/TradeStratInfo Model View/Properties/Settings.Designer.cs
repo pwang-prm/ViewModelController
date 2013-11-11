@@ -34,15 +34,13 @@ namespace TradeStratInfo_Model_View.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string a {
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|\\PRM_COMBINED_TEST.sdf;Max Database Size=2047")]
+        public string ClientPRM_COMBINED_TESTConnectionString {
             get {
-                return ((string)(this["a"]));
-            }
-            set {
-                this["a"] = value;
+                return ((string)(this["ClientPRM_COMBINED_TESTConnectionString"]));
             }
         }
     }

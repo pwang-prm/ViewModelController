@@ -2,6 +2,9 @@
     
     
     public partial class PRM_COMBINED_TESTDataSet1 {
+        partial class gszExchangeContractsDataTable
+        {
+        }
     }
 }
 

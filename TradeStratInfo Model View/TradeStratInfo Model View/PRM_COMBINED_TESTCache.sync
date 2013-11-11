@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<syncDesignerSurface dslVersion="1.0.0.0" Id="3be15ef4-06ef-49a7-9dc4-58d06625ebfe" parentDesignerName="PRM_COMBINED_TESTCache" codeGenerationMode="Client and Server" synchronizeInOneTransaction="false" clientFileLocation="4c97f374-d78e-430b-8342-934d7521f553" serverFileLocation="4c97f374-d78e-430b-8342-934d7521f553" isRootSyncDesigner="true" rootSyncDesignerShouldGenerateCode="true" isClientSyncDesigner="false" isServerSyncDesigner="false" changeTrackingType="SqlServerChangeTracking" xmlns="http://schemas.microsoft.com/dsltools/SyncDesigner">
+  <syncAdapters>
+    <syncAdapter Id="e45b7206-d45d-4169-9277-bf3fe3d698cf" name="gszExchangeContractsSyncAdapter" tableName="gszExchangeContracts">
+      <syncAdapterCommands>
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTableInsertCommand" />
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTableDeleteCommand" />
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTableUpdateCommand" />
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTableSelectConflictDeletedRowsCommand" />
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTableSelectConflictUpdatedRowsCommand" />
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTableSelectIncrementalInsertsCommand" />
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTableSelectIncrementalDeletesCommand" />
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTableSelectIncrementalUpdatesCommand" />
+      </syncAdapterCommands>
+    </syncAdapter>
+  </syncAdapters>
+  <syncTables>
+    <syncTable Id="0653c55e-dd53-4f21-9312-00e29bc3a923" name="gszExchangeContractsSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="gszExchangeContracts" deletedItemsTableName="gszExchangeContracts_Tombstone" createdDateColumnName="CreationDate" lastEditDateColumnName="LastEditDate" fullTableName="dbo.gszExchangeContracts" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncGroup" />
+      </syncGroup>
+    </syncTable>
+  </syncTables>
+  <syncGroups>
+    <syncGroup Id="ce41d7bf-7a55-4941-84df-f7981ca448f9" name="gszExchangeContractsSyncGroup" />
+  </syncGroups>
+  <clientSyncProvider>
+    <clientSyncProvider Id="25703a50-b479-4b72-9c99-f3c443e00d2c" name="PRM_COMBINED_TESTCacheClientSyncProvider">
+      <syncConnection>
+        <syncConnectionMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/ClientConnection" />
+      </syncConnection>
+    </clientSyncProvider>
+  </clientSyncProvider>
+  <serverSyncProvider>
+    <serverSyncProvider Id="43ab3c62-aeda-4d8d-a0c7-e6d0e31c9445" name="PRM_COMBINED_TESTCacheServerSyncProvider">
+      <syncAdapters>
+        <syncAdapterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncAdapter" />
+      </syncAdapters>
+      <syncConnection>
+        <syncConnectionMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/ServerConnection" />
+      </syncConnection>
+      <selectNewAnchorCommand>
+        <syncAdapterCommandMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/selectNewAnchorCmd" />
+      </selectNewAnchorCommand>
+    </serverSyncProvider>
+  </serverSyncProvider>
+  <syncAgent>
+    <syncAgent name="PRM_COMBINED_TESTCacheSyncAgent" synchronizeInOneTransaction="false">
+      <serverSyncProvider>
+        <serverSyncProviderMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/PRM_COMBINED_TESTCacheServerSyncProvider" />
+      </serverSyncProvider>
+      <clientSyncProvider>
+        <clientSyncProviderMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/PRM_COMBINED_TESTCacheClientSyncProvider" />
+      </clientSyncProvider>
+      <syncTables>
+        <syncTableMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/gszExchangeContractsSyncTable" />
+      </syncTables>
+    </syncAgent>
+  </syncAgent>
+  <syncAdapterCommands>
+    <syncAdapterCommand Id="bf7031b0-d5fa-412c-aa55-98875f07bf0f" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) INSERT INTO dbo.gszExchangeContracts ([gszContractName], [gszProductFamily], [contractType], [expiration], [series], [underlyingContract], [underlyingSeries], [exchangeID], [exchProdID], [exchExpMonth], [exchExpYear], [openTime], [settlement], [BatchRecalcMktWidth], [TopMonth]) VALUES (@gszContractName, @gszProductFamily, @contractType, @expiration, @series, @underlyingContract, @underlyingSeries, @exchangeID, @exchProdID, @exchExpMonth, @exchExpYear, @openTime, @settlement, @BatchRecalcMktWidth, @TopMonth) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.gszExchangeContracts')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.gszExchangeContracts') " commandType="Text" name="gszExchangeContractsSyncTableInsertCommand" commandKind="InsertCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_client_id_binary" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@gszContractName" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@gszProductFamily" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@contractType" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@expiration" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@series" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@underlyingContract" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@underlyingSeries" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@exchangeID" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@exchProdID" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@exchExpMonth" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@exchExpYear" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@openTime" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@settlement" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@BatchRecalcMktWidth" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@TopMonth" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_row_count" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_last_received_anchor" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="5cc4bf63-d2b7-48cf-8cc9-64f42d780590" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) DELETE dbo.gszExchangeContracts FROM dbo.gszExchangeContracts JOIN CHANGETABLE(VERSION dbo.gszExchangeContracts, ([gszContractName]), (@gszContractName)) CT  ON CT.[gszContractName] = dbo.gszExchangeContracts.[gszContractName] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION &lt;= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.gszExchangeContracts')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.gszExchangeContracts') " commandType="Text" name="gszExchangeContractsSyncTableDeleteCommand" commandKind="DeleteCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_client_id_binary1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@gszContractName1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_force_write" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_last_received_anchor1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_row_count1" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="247194a2-97e4-4687-a908-a7baacdd2d98" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) UPDATE dbo.gszExchangeContracts SET [gszProductFamily] = @gszProductFamily, [contractType] = @contractType, [expiration] = @expiration, [series] = @series, [underlyingContract] = @underlyingContract, [underlyingSeries] = @underlyingSeries, [exchangeID] = @exchangeID, [exchProdID] = @exchProdID, [exchExpMonth] = @exchExpMonth, [exchExpYear] = @exchExpYear, [openTime] = @openTime, [settlement] = @settlement, [BatchRecalcMktWidth] = @BatchRecalcMktWidth, [TopMonth] = @TopMonth FROM dbo.gszExchangeContracts  JOIN CHANGETABLE(VERSION dbo.gszExchangeContracts, ([gszContractName]), (@gszContractName)) CT  ON CT.[gszContractName] = dbo.gszExchangeContracts.[gszContractName] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION &lt;= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.gszExchangeContracts')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.gszExchangeContracts') " commandType="Text" name="gszExchangeContractsSyncTableUpdateCommand" commandKind="UpdateCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@gszProductFamily1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@contractType1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@expiration1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@series1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@underlyingContract1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@underlyingSeries1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@exchangeID1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@exchProdID1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@exchExpMonth1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@exchExpYear1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@openTime1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@settlement1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@BatchRecalcMktWidth1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@TopMonth1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@gszContractName2" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_force_write1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_last_received_anchor2" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_client_id_binary2" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_row_count2" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="e254047a-ab1e-4c09-81f5-0aedc064b7e4" commandText="SELECT CT.[gszContractName], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM CHANGETABLE(CHANGES dbo.gszExchangeContracts, @sync_last_received_anchor) CT WHERE (CT.[gszContractName] = @gszContractName AND CT.SYS_CHANGE_OPERATION = 'D')" commandType="Text" name="gszExchangeContractsSyncTableSelectConflictDeletedRowsCommand" commandKind="SelectConflictDeletedRowsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_last_received_anchor3" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@gszContractName3" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="8b60aafe-29ae-4e9d-86e7-3e751bf77370" commandText="SELECT dbo.gszExchangeContracts.[gszContractName], [gszProductFamily], [contractType], [expiration], [series], [underlyingContract], [underlyingSeries], [exchangeID], [exchProdID], [exchExpMonth], [exchExpYear], [openTime], [settlement], [BatchRecalcMktWidth], [TopMonth], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM dbo.gszExchangeContracts JOIN CHANGETABLE(VERSION dbo.gszExchangeContracts, ([gszContractName]), (@gszContractName)) CT  ON CT.[gszContractName] = dbo.gszExchangeContracts.[gszContractName]" commandType="Text" name="gszExchangeContractsSyncTableSelectConflictUpdatedRowsCommand" commandKind="SelectConflictUpdatedRowsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@gszContractName4" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="75d5955a-e093-4028-82a9-be7c1a6ac7b2" commandText="IF @sync_initialized = 0 SELECT dbo.gszExchangeContracts.[gszContractName], [gszProductFamily], [contractType], [expiration], [series], [underlyingContract], [underlyingSeries], [exchangeID], [exchProdID], [exchExpMonth], [exchExpYear], [openTime], [settlement], [BatchRecalcMktWidth], [TopMonth] FROM dbo.gszExchangeContracts LEFT OUTER JOIN CHANGETABLE(CHANGES dbo.gszExchangeContracts, @sync_last_received_anchor) CT ON CT.[gszContractName] = dbo.gszExchangeContracts.[gszContractName] WHERE (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary) ELSE  BEGIN SELECT dbo.gszExchangeContracts.[gszContractName], [gszProductFamily], [contractType], [expiration], [series], [underlyingContract], [underlyingSeries], [exchangeID], [exchProdID], [exchExpMonth], [exchExpYear], [openTime], [settlement], [BatchRecalcMktWidth], [TopMonth] FROM dbo.gszExchangeContracts JOIN CHANGETABLE(CHANGES dbo.gszExchangeContracts, @sync_last_received_anchor) CT ON CT.[gszContractName] = dbo.gszExchangeContracts.[gszContractName] WHERE (CT.SYS_CHANGE_OPERATION = 'I' AND CT.SYS_CHANGE_CREATION_VERSION  &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.gszExchangeContracts')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.gszExchangeContracts')  END " commandType="Text" name="gszExchangeContractsSyncTableSelectIncrementalInsertsCommand" commandKind="SelectIncrementalInsertsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_initialized" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_last_received_anchor4" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_client_id_binary3" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_new_received_anchor" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="f98e5c09-d5ac-4271-9c43-542721733303" commandText="IF @sync_initialized &gt; 0  BEGIN SELECT CT.[gszContractName] FROM CHANGETABLE(CHANGES dbo.gszExchangeContracts, @sync_last_received_anchor) CT WHERE (CT.SYS_CHANGE_OPERATION = 'D' AND CT.SYS_CHANGE_VERSION &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.gszExchangeContracts')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.gszExchangeContracts')  END " commandType="Text" name="gszExchangeContractsSyncTableSelectIncrementalDeletesCommand" commandKind="SelectIncrementalDeletesCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_initialized1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_last_received_anchor5" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_new_received_anchor1" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_client_id_binary4" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="e86f08d7-ed06-4461-bd7b-d526de82c172" commandText="IF @sync_initialized &gt; 0  BEGIN SELECT dbo.gszExchangeContracts.[gszContractName], [gszProductFamily], [contractType], [expiration], [series], [underlyingContract], [underlyingSeries], [exchangeID], [exchProdID], [exchExpMonth], [exchExpYear], [openTime], [settlement], [BatchRecalcMktWidth], [TopMonth] FROM dbo.gszExchangeContracts JOIN CHANGETABLE(CHANGES dbo.gszExchangeContracts, @sync_last_received_anchor) CT ON CT.[gszContractName] = dbo.gszExchangeContracts.[gszContractName] WHERE (CT.SYS_CHANGE_OPERATION = 'U' AND CT.SYS_CHANGE_VERSION &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.gszExchangeContracts')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.gszExchangeContracts')  END " commandType="Text" name="gszExchangeContractsSyncTableSelectIncrementalUpdatesCommand" commandKind="SelectIncrementalUpdatesCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_initialized2" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_last_received_anchor6" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_new_received_anchor2" />
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_client_id_binary5" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="cafde901-e375-4f55-948f-4d670d416cc6" commandText="Select @sync_new_received_anchor = CHANGE_TRACKING_CURRENT_VERSION()" commandType="Text" name="selectNewAnchorCmd" commandKind="SelectNewAnchorCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/3be15ef4-06ef-49a7-9dc4-58d06625ebfe/@sync_new_received_anchor3" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+  </syncAdapterCommands>
+  <syncAdapterCommandParameters>
+    <syncAdapterCommandParameter Id="a5020b46-8bf8-43bb-ad82-69114e873c85" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="40a6a702-6382-4128-bbd7-43632d461e08" parameterType="Char" parameterName="@gszContractName" name="@gszContractName" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1b87d6b5-0010-48b0-a82c-1dbf84fca1bb" parameterType="Char" parameterName="@gszProductFamily" name="@gszProductFamily" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="0466c76d-87fd-4ce7-88c7-00a801addd84" parameterType="Char" parameterName="@contractType" name="@contractType" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="d10bc2c7-e93d-4e8d-8a3a-5a43a795c81d" parameterType="DateTime" parameterName="@expiration" name="@expiration" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e4f5dde9-4f0a-4662-bd28-d064519280a3" parameterType="Char" parameterName="@series" name="@series" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="32a9b1f7-1c42-4117-ad37-f221e22c2537" parameterType="Char" parameterName="@underlyingContract" name="@underlyingContract" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2f297e73-3957-4603-8b0a-560f97714662" parameterType="Char" parameterName="@underlyingSeries" name="@underlyingSeries" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a749c8a3-0c6d-41e8-aa83-ef8453520c68" parameterType="Char" parameterName="@exchangeID" name="@exchangeID" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ccad03e4-ae60-4b32-9ce3-8bdbf3116448" parameterType="Char" parameterName="@exchProdID" name="@exchProdID" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="cfe99603-1c64-4d9f-9041-a2c606693d46" parameterType="Char" parameterName="@exchExpMonth" name="@exchExpMonth" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b69efb66-081b-408d-9575-ab3b994dc124" parameterType="Char" parameterName="@exchExpYear" name="@exchExpYear" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e37b9184-3805-44ab-923f-69ad9be69d6f" parameterType="Char" parameterName="@openTime" name="@openTime" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f7641cd5-2058-47c2-af0a-cf559df74cce" parameterType="Float" parameterName="@settlement" name="@settlement" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="6b10351f-8c37-44c8-97cb-9e08193e7c57" parameterType="Float" parameterName="@BatchRecalcMktWidth" name="@BatchRecalcMktWidth" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="21534af8-83c9-4b01-a2c4-c8c5eabbe2e6" parameterType="Int" parameterName="@TopMonth" name="@TopMonth" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="31f36beb-7cd6-4ab3-87b7-0be7eafe20e4" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="3228151a-b75c-4f6e-8178-e501c68d8d87" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7db2314f-836a-4ecc-8ffe-38c26a0258e1" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1bd3d643-cb43-403a-9e22-402e6bb71b27" parameterType="Char" parameterName="@gszContractName" name="@gszContractName1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ff0bbc25-bd27-4ab4-a546-907a7d3fd022" parameterType="Bit" parameterName="@sync_force_write" name="@sync_force_write" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="09625c65-1977-4c67-b7d8-ce45298c558c" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f03fbf87-3ee4-44b7-adfc-8ad69c6d46ed" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count1" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="043e7423-2f4c-499b-af3a-bdf27e050e9f" parameterType="Char" parameterName="@gszProductFamily" name="@gszProductFamily1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="49406159-a508-4fc9-942a-829fad682f0f" parameterType="Char" parameterName="@contractType" name="@contractType1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2e69468f-947f-4aa3-afe2-431c027779f5" parameterType="DateTime" parameterName="@expiration" name="@expiration1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="512800fc-de2a-404a-8bf2-26c234f5a73e" parameterType="Char" parameterName="@series" name="@series1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7a1186e0-698d-432b-92fd-91acc2f8817f" parameterType="Char" parameterName="@underlyingContract" name="@underlyingContract1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="deedde64-a0a0-40d0-b6b2-2cccb77832e2" parameterType="Char" parameterName="@underlyingSeries" name="@underlyingSeries1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="50ee9024-0dd6-4d6e-a6ed-3f1b7df5a31b" parameterType="Char" parameterName="@exchangeID" name="@exchangeID1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a0ca4322-ead2-40f4-8d61-77f5a1286c27" parameterType="Char" parameterName="@exchProdID" name="@exchProdID1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b2873159-99e0-4e9e-8f3e-39c4fe99fd18" parameterType="Char" parameterName="@exchExpMonth" name="@exchExpMonth1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="0afa60cc-66ae-4eae-81ea-a9a064c72d8b" parameterType="Char" parameterName="@exchExpYear" name="@exchExpYear1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ed979445-e48a-4cc4-9ff3-15d3056ea474" parameterType="Char" parameterName="@openTime" name="@openTime1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a30fbdfb-088b-4da3-ab7f-5bf304534eea" parameterType="Float" parameterName="@settlement" name="@settlement1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="42b69f89-0985-453c-bda1-7504b7a40cdb" parameterType="Float" parameterName="@BatchRecalcMktWidth" name="@BatchRecalcMktWidth1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c58bca57-49c7-4a96-927e-fd1979763d3d" parameterType="Int" parameterName="@TopMonth" name="@TopMonth1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="bca8f3bc-6c81-492b-8404-757b3ba9037a" parameterType="Char" parameterName="@gszContractName" name="@gszContractName2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="8c474c79-88c6-44e1-a288-80265ca58768" parameterType="Bit" parameterName="@sync_force_write" name="@sync_force_write1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1b5b0e21-62e3-42d2-b2f6-589e61cdcf57" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="06b3afa8-1e3a-432a-8545-07573e6cff0e" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3af1cb40-b361-4870-9141-a711ac142c53" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count2" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="20ab5351-20e1-4e00-bfb2-b8dbd261c1c3" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="221d47aa-0a2b-41e3-986e-7af5f9a417bd" parameterType="Char" parameterName="@gszContractName" name="@gszContractName3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="939336b9-799e-4ff4-868d-d39471410977" parameterType="Char" parameterName="@gszContractName" name="@gszContractName4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="64d043e9-f068-4f93-8a82-9ca5f86a5dc2" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c092de4d-7276-474c-a100-b01c870d6685" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="4731ced2-5dab-4729-a158-bf1a69d1ef4b" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="fb7d3628-01c6-45c9-9ac7-51409108183c" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="53304310-5163-4fea-be10-016642445340" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c1c0dcc3-a394-4a91-ae86-83b793cc317d" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor5" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="bcfd6a3a-4fa6-494f-8b72-e5107737731d" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c117026b-3a68-4225-910e-4406f433437e" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7feff903-0ebe-412a-9b2a-54a7857a19bc" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="65ecabde-f1ea-4f40-a64a-85571c444187" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor6" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ceacf160-0bae-4f7d-b5d9-8aea7058c88b" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="97f9da34-0b4f-44ab-a81a-213c35b38628" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary5" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a8dbbd1a-eb00-4d08-8355-a09d861b0ae1" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor3" parameterDirection="Output" />
+  </syncAdapterCommandParameters>
+  <syncConnections>
+    <syncConnection Id="179f1ded-38ef-4208-8824-25c116dd319a" name="ClientConnection" connectionDisplayString="ClientPRM_COMBINED_TESTConnectionString (Settings)" isAppSettings="true" appSettingsObjectName="Settings" appSettingsPropertyName="ClientPRM_COMBINED_TESTConnectionString" appSettingsPropertyReference="" />
+    <syncConnection Id="b635ff97-1507-4aa4-accf-2da371b73070" name="ServerConnection" connectionDisplayString="PRM_COMBINED_TESTConnectionString (Settings)" isAppSettings="true" appSettingsObjectName="Settings" appSettingsPropertyName="PRM_COMBINED_TESTConnectionString" appSettingsPropertyReference="" />
+  </syncConnections>
+</syncDesignerSurface>
