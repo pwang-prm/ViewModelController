@@ -1,0 +1,54 @@
+c:\users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\TradeStratInfo Model View.exe.config
+c:\users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\TradeStratInfo Model View.exe
+c:\users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\TradeStratInfo Model View.pdb
+c:\users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo_Model_View.Form1.resources
+c:\users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo_Model_View.Properties.Resources.resources
+c:\users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo Model View.csproj.GenerateResource.Cache
+c:\users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo Model View.exe
+c:\users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo Model View.pdb
+C:\Users\prm\documents\visual studio 2010\Projects\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo Model View.csprojResolveAssemblyReference.cache
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo Model View.csprojResolveAssemblyReference.cache
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo_Model_View.Form1.resources
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo_Model_View.Form2.resources
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo_Model_View.Properties.Resources.resources
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo Model View.csproj.GenerateResource.Cache
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\PRM_COMBINED_TEST.sdf
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\NLog.config
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\TradeStratInfo Model View.exe.config
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\TradeStratInfo Model View.exe
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\TradeStratInfo Model View.pdb
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\DataGridExtensions.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\nunit.framework.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\PRM_BusinessObjects.exe
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\PRM_Database.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\NLog.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\RQuant.Indicator.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\RQuant.Chart.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\RQuant.Data.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\RQuant.FinMath.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\RQuant.Core.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\PRM_BusinessObjects.pdb
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\PRM_Database.pdb
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\DataGridExtensions.xml
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\nunit.framework.xml
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\NLog.xml
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo Model View.exe
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\obj\x86\Debug\TradeStratInfo Model View.pdb
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.CSharp.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.Synchronization.Data.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.Synchronization.Data.Server.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.Synchronization.Data.SqlServerCe.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.Synchronization.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.Data.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.Deployment.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.Drawing.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.Windows.Forms.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.Xml.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\System.Xml.Linq.dll
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.Synchronization.xml
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.Synchronization.Data.xml
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.Synchronization.Data.Server.xml
+C:\Users\prm\Documents\GitHub\ViewModelController\TradeStratInfo Model View\TradeStratInfo Model View\bin\Debug\Microsoft.Synchronization.Data.SqlServerCe.xml
